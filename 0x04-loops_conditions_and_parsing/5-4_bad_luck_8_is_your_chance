@@ -9,7 +9,7 @@ do
 	echo "bad luck"
     elif [ "$c" -eq 8 ]
     then
-	echo "good look"
+	echo "good luck"
     else
 	echo "Holberton School"
     fi
