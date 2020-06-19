@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#while loop that prints a message
+
+c=0
+while [ $c -lt 10 ]
+do
+    echo "Holberton School"
+    c=$((c+1))
+done
