@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Bash that prints a message.
 
 for ((c=0; c<10; c++))
 do
