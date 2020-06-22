@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Bash script that displays the PID with a specific name.
+
+pgrep -l bash
