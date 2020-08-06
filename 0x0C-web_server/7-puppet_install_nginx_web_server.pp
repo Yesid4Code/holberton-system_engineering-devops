@@ -7,7 +7,7 @@ package { 'nginx':
 
 file { 'index.html':
     path    => '/var/www/html/index.html'
-    content => 'Holvertons School',
+    content => 'Holberton School',
 }
 
 file_line { 'title':
