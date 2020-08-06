@@ -1,6 +1,6 @@
-# 
+# Install and configure Nginx on a web server with Puppet
 
-package { 'Nginx':
+package { 'nginx':
     ensure => installed,
     name   => 'nginx',
 }
