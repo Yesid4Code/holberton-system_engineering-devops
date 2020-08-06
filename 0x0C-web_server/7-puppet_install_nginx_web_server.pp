@@ -12,10 +12,10 @@ file { 'index.html':
 
 file_line { 'title':
     ensure   => present,
-    path     => '/etc/nginx/sites-available/default;',
+    path     => '/etc/nginx/sites-available/default',
     after    => 'server_name _;',
     line     => 'rewrite ^/redirect_me https://www.holbertonschool.co permanent;',
-    multiple => true,
+    multiple => true
 
 }
 
