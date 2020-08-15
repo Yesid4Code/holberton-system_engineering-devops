@@ -9,12 +9,12 @@ sudo echo "ENABLED=1" >> /etc/default/haproxy
 
 # Set the web front-end and back-end
 sudo echo "
-frontend front
+frontend web-fronted
 	 bind *:80
 	 mode http
-	 default_backend back
+	 default_backend web-backend
 
-backend back
+backend web-backend
 	balance roundrobin
 	server 1645-web-01-1596432707 35.237.133.118 check
 	server 1645-web-02 3.90.191.97 check
