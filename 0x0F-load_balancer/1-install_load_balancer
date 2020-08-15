@@ -16,7 +16,7 @@ frontend front
 
 backend back
 	balance roundrobin
-	server 1645-web-01 35.237.133.118 check
+	server 1645-web-01-1596432707 35.237.133.118 check
 	server 1645-web-02 3.90.191.97 check
 " >> /etc/haproxy/haproxy.cfg
 
