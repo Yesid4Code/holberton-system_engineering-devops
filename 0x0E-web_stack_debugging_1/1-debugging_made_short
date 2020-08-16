@@ -2,5 +2,4 @@
 # Change nginx configuration to listen on port 80
 
 sudo sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
-sudo service nginx restart
 pkill -o nginx
