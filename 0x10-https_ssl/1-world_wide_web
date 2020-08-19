@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+# add a subdomain
 # $1 = domain, $2 = subdomain
 domain_cfg()
 {
