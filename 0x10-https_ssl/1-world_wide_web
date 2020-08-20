@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # add a subdomain
 # $1 = domain, $2 = subdomain
 domain_cfg()
