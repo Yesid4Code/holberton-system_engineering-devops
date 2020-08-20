@@ -25,6 +25,8 @@ defaults
         mode    http
         option  httplog
         option  dontlognull
+        option forwardfor
+        option http-server-close
         timeout connect 5000
         timeout client  50000
         timeout server  50000
@@ -37,38 +39,16 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend web-fronted
-         bind *:80
-         mode http
-         default_backend web-backend
-
-backend web-backend
-        balance roundrobin
-        server 1645-web-01-1596432707 35.237.133.118 check
-        server 1645-web-02 3.90.191.97 check
-
-
-frontend web-fronted
-         bind *:80
-         mode http
-         default_backend web-backend
+        bind *:80
+        reqadd X-Forwarded-Proto:\ http
+        default_backend web-backend
 
 frontend web-frontend-https
-         bind *:443 ssl crt /etc/haproxy/certs/www.yesid4dev.tech.pem
-         regadd X-Forwarded-Proto:\ https
-         default_backend web-backend
+        bind *:443 ssl crt /etc/haproxy/certs/www.yesid4dev.tech.pem
+        reqadd X-Forwarded-Proto:\ https
+        default_backend web-backend
 
 backend web-backend
         balance roundrobin
-        server 1645-web-01-1596432707 35.237.133.118 check
-        server 1645-web-02 3.90.191.97 check
-
-
-frontend web-fronted
-         bind *:80
-         mode http
-         default_backend web-backend
-
-backend web-backend
-        balance roundrobin
-        server 1645-web-01-1596432707 35.237.133.118 check
-        server 1645-web-02 3.90.191.97 check
+        server 1645-web-01-1596432707 35.237.133.118:80 check
+        server 1645-web-02 3.90.191.97:80 check
