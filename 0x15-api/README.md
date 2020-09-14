@@ -1,4 +1,4 @@
-
+# 0x15 API
 ## Learning Objectives for this project
 * What Bash scripting should not be used for
 * What is an API
@@ -12,3 +12,10 @@
 * Pythonic Function name style
 * Pythonic Constant name style
 * Significance of CapWords or CamelCase in Python
+
+## Resources
+[Friends don’t let friends program in shell script](https://www.turnkeylinux.org/blog/friends-dont-let-friends-program-shell-script)
+[What is an API](https://www.webopedia.com/TERM/A/API.html)
+[What is an API? In English, please](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
+[What is a REST API](https://www.sitepoint.com/developers-rest-api/)
+[What are microservices](https://smartbear.com/solutions/microservices/)
