@@ -10,12 +10,12 @@ from sys import argv
 if __name__ == "__main__":
     user_id = argv[1]
     url = "https://jsonplaceholder.typicode.com/"
-    user_request = "{}users/{}".format(url, user_id)
-    user_name = requests.get(user_request).json().get("name")
-    tasks = requests.get("{}todos?userId={}".format(url, user_id)).json()
+    user_req = "{}users/{}".format(url, user_id)
+    user_name = requests.get(user_req, verify=False).json().get("name")
+    tasks = requests.get("{}todos?userId={}".format(url, user_id), verify=False).json()
     total_tasks = len(tasks)
     tasks_done = requests.get("{}todos?userId={}&&completed=true".
-                              format(url, user_id)).json()
+                              format(url, user_id), verify=False).json()
     total_tasks_done = len(total_tasks_done)
 
     print("Employee {} is done with tasks({}/{})".
