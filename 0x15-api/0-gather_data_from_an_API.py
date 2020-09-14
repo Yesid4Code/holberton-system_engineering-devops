@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    Python script that
+    Python script that get data for an employee using a REST API.
+    Returns information about his/her TODO list progress.
 """
 import requests
 from sys import argv
