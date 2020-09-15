@@ -16,7 +16,7 @@ if __name__ == "__main__":
     tasks_user = requests.get("{}todos?userId={}".format(url, argv[1])).json()
     tasks_done = requests.get("{}todos?userId={}&&completed=true"
                               .format(url, argv[1])).json()
-    jsonfile = "{}.csv".format(argv[1])
+    jsonfile = "{}.json".format(argv[1])
     list_task = []
     for task in tasks_user:
         dics_tasks = {}
