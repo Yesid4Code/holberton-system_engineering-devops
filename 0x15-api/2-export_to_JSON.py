@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for task in tasks_user:
         dics_tasks = {}
         dics_tasks["task"] = task["title"]
-        dics_tasks["completed"] = task["title"]
+        dics_tasks["completed"] = task["completed"]
         dics_tasks["username"] = name_user
         list_task.append(dics_tasks)
 
