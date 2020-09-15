@@ -17,7 +17,8 @@ if __name__ == "__main__":
     user_dic = {}
     for user in users:
         list_tasks = []
-        tasks = requests.get("{}todos?userId={}".format(url, user["id"])).json()
+        tasks = requests.get("{}todos?userId={}".
+                             format(url, user["id"])).json()
         name_user = user["username"]
         for task in tasks:
             dics_tasks = {}
