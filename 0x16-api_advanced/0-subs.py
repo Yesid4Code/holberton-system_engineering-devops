@@ -5,7 +5,7 @@
 import requests
 
 
-def top_ten(subreddit):
+def number_of_subscribers(subreddit)
     """ . """
     if subreddit is None:
         return 0
