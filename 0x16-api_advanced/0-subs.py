@@ -5,12 +5,11 @@
 import requests
 
 
-def number_of_subscribers(subreddit)
+def number_of_subscribers(subreddit):
     """ . """
-    if subreddit is None:
-        return 0
-
-    url = "https://www.reddit.com/dev/api/{}/about.json".format(subreddit)
-    response = requests.get(url, headers={"User-Agent": ""}).json()["data"]
+    url = "https://api.reddit.com/r/{}/about".format(subreddit)
+    response = requests.get(url, headers={"User-Agent": "Python3"})
     if response:
-        return response["subscribers"]
+        response = response.json()
+        return response["data"]["subscribers"]
+    return 0
