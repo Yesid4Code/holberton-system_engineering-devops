@@ -7,7 +7,7 @@
 import requests
 
 
-def recurse(subreddit, hot_list=[], next=None):
+def recurse(subreddit, hot_list=[], next=""):
     """ Function that request a list of articles. """
     if next is None:
         return []
