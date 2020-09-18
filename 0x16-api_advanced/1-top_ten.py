@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Request from a API of reddit Top 10number of subscriber to a subreddit.
+    Request from a API of reddit Top 10 number of subscriber to a subreddit.
 """
 import requests
 
@@ -12,10 +12,7 @@ def top_ten(subreddit):
     if str(response) != "<Response [200]>":  # response.status_code != 200
         print(None)
         return
-    # print(response.json())
     response = response.json()
     child = response["data"]["children"]
-    tile = []
-    i = 0
     for tittle in child:
         print(tittle["data"]["title"])
