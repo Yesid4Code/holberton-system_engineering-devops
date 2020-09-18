@@ -23,4 +23,4 @@ def recurse(subreddit, hot_list=[], next=None):
     next = response["data"]["after"]
     for tittle in child:
         hot_list.append(tittle["data"]["title"])
-    return hot_list + recurse(subreddit, [], after)
+    return hot_list + recurse(subreddit, [], next)
